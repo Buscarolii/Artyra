@@ -6,7 +6,7 @@ out = Path ("/mnt/data/artyra_site_premium_github" )
 if out.exists():
     shutil.rmtree(out)
 out.mkdir ( parents=True )
-assets = out / "assets"
+assets = out / "assets/artyra-logo.png"
 assets.mkdir()
 
 logo_candidates = [
@@ -19,6 +19,21 @@ for c inhttps://file+.vscode-resource.vscode-cdn.net/Users/amanda/Documents/GitH
         break
 
 index_html = r'''<!DOCTYPE html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>ARTYRA Logo Animation</title>
+<style>
+body{margin:0;background:#000;display:grid;place-items:center;min-height:100vh}
+.logo{width:min(70vw,700px);animation:fade 1.4s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(20px) scale(.96);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+<img class="logo" src="../01_LOGO_PRINCIPAL/ARTYRA_logo_principal_preto_2000.png">
+</body>
+</html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -49,7 +64,10 @@ index_html = r'''<!DOCTYPE html>
       inset: 0;
       background:
         radial-gradient(circle at 70% 10%, rgba(123,44,191,.25), transparent 32%),
-        radial-gradient(circle at 15% 80%, rgba(157,78,221,.18), transparent 35%);
+        radial-gradient(circle at 15% 80%, rgba(157,78,221,.18), transparent 35%),
+        url('./01_LOGO_PRINCIPAL/ARTYRA_logo_principal_preto_2000.png') no-repeat center center;
+      background-size: 800px;
+      opacity: 0.08;
       pointer-events: none;
       z-index: -1;
     }
