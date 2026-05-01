@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+><html 
+from pathlib import Path
+import shutil, zipfile, os
+
+out = Path ("/mnt/data/artyra_site_premium_github" )
+if out.exists():
+    shutil.rmtree(out)
+out.mkdir ( parents=True )
+assets = out / "assets"
+assets.mkdir()
+
+logo_candidates = [
+    "/mnt/data/a_clean_minimal_dark_branding_logo_image_on_a_bla.png",
+    "/mnt/data/user-eXuio3VPJ2DNsl14vP5YHotF/ce6e0f1274c24a0bb0bbc99641afbd1d/mnt/data/a_clean_minimal_dark_branding_logo_image_on_a_bla.png",
+]
+for c inhttps://file+.vscode-resource.vscode-cdn.net/Users/amanda/Documents/GitHub/Artyra/Artyra/artyra-logo.png?version%3D1777605864976 logo_candidates:
+    if Path(c).exists():
+        shutil.copy(c, assets / "artyra-logo.png")
+        break
+
+index_html = r'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -143,7 +163,7 @@
         <a href="#portfolio">Portfólio</a>
         <a href="#contato">Contato</a>
       </nav>
-      <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="whatsapp" href="https://wa.me/5521974864115" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </header>
 
@@ -188,14 +208,7 @@
     <section id="portfolio">
       <div class="container">
         <div class="section-head">
-          <h2>Aplicações da marca</h2>
-          <p>O sistema ARTYRA funciona em fundo preto, versão clara, redes sociais, embalagens, cartões e ambientes digitais.</p>
-        </div>
-        <div class="showcase">
-          <div class="panel"><div><div class="mock-word">ARTYRA</div><div class="accent-line"></div></div></div>
-          <div class="panel alt"><div><div class="mock-word" style="font-size:58px; letter-spacing:10px;">ARTYRA</div><div class="accent-line"></div></div></div>
-        </div>
-      </div>
+          
     </section>
 
     <section id="contato">
@@ -204,7 +217,7 @@
           <div class="eyebrow">Contato</div>
           <h2>Vamos criar algo memorável?</h2>
           <p>Entre em contato para projetos de identidade visual, direção criativa, campanhas e experiências digitais.</p>
-          <a class="btn primary" href="mailto:contato@artyra.com">contato@artyra.com</a>
+          <a class="btn primary" href="mailto:artyradesing@outlook.com">artyradesing@outlook.com</a>
         </div>
       </div>
     </section>
