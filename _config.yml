@@ -1,0 +1,22 @@
+# Jekyll configuration for ARTYRA site
+
+title: ARTYRA — Creative Brand Studio
+description: Marca criativa premium de identidade visual, direção artística e design contemporâneo.
+author: ARTYRA
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+# Exclude from processing
+exclude:
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+
+# GitHub Pages settings
+safe: true
